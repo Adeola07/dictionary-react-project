@@ -3,6 +3,7 @@ import "./App.css";
 export default function Dictionary() {
   const [keyword, setKeyword] = useState("");
   function search(event) {
+    event.preventDefault();
     alert(`Searching for ${keyword}`);
   }
   function handleResponse(event) {
