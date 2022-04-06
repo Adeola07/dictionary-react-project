@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import "./App.css";
 import axios from "axios";
+import Result from "./Result";
 
 export default function Dictionary() {
   const [keyword, setKeyword] = useState("");
-
+  const [result, setResult] = useState(null);
   function search(event) {
     event.preventDefault();
   }
@@ -13,7 +14,7 @@ export default function Dictionary() {
     setKeyword(event.target.value);
   }
   function showResponse(response) {
-    console.log(response.data);
+    setResult(response.data[0]);
   }
 
   let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
@@ -24,6 +25,7 @@ export default function Dictionary() {
       <form onSubmit={search}>
         <input type="search" onClick={handleResponse} />
       </form>
+      <Result result={result} />
     </div>
   );
 }
