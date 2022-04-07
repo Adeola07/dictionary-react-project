@@ -6,24 +6,25 @@ import Result from "./Result";
 export default function Dictionary() {
   const [keyword, setKeyword] = useState("");
   const [result, setResult] = useState(null);
-  function search(event) {
-    event.preventDefault();
-  }
-  function handleResponse(event) {
+
+  function handleKeyword(event) {
     event.preventDefault();
     setKeyword(event.target.value);
   }
-  function showResponse(response) {
+  function handleResponse(response) {
     setResult(response.data[0]);
   }
+  function search(event) {
+    event.preventDefault();
 
-  let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
-  axios.get(apiUrl).then(showResponse);
+    let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
+    axios.get(apiUrl).then(handleResponse);
+  }
 
   return (
     <div className="Dictionary">
       <form onSubmit={search}>
-        <input type="search" onClick={handleResponse} />
+        <input type="search" onClick={handleKeyword} />
       </form>
       <Result result={result} />
     </div>

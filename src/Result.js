@@ -6,15 +6,13 @@ export default function Result(props) {
     return (
       <div className="Result">
         <h2>{props.result.word}</h2>
-        <p>
-          {props.result.meanings.map(function (meaning, index) {
-            return (
-              <div key={index}>
-                <Meaning meaning={meaning} />
-              </div>
-            );
-          })}{" "}
-        </p>
+        {props.result.meanings.map(function (meaning, index) {
+          return (
+            <div key={index}>
+              <Meaning meaning={meaning} />
+            </div>
+          );
+        })}{" "}
       </div>
     );
   } else {
