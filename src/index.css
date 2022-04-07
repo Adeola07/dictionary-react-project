@@ -11,6 +11,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-.Dictionary .form {
+.Dictionary .header {
+  font-family: "Lavishly Yours", cursive;
   text-align: center;
 }
