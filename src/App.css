@@ -1,5 +1,7 @@
 .App {
   margin-top: 15px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 .App .header {
   font-family: "Lavishly Yours", cursive;

@@ -36,6 +36,7 @@ export default function Dictionary(props) {
 
   function load() {
     setLoaded(true);
+    search();
   }
   if (loaded) {
     return (
@@ -50,6 +51,7 @@ export default function Dictionary(props) {
                   className="form-control"
                   placeholder="Enter word here..."
                   autoFocus="on"
+                  defaultValue={props.defaultKeyword}
                 />
               </div>
             </div>
