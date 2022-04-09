@@ -1,5 +1,5 @@
 import "./App.css";
-import "./Dictionary.css";
+
 import Dictionary from "./Dictionary";
 
 function App() {
