@@ -1,4 +1,24 @@
-.Dictionary .header {
-  font-family: "Lavishly Yours", cursive;
-  text-align: center;
+.Dictionary h1 {
+  font-size: 50px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  font-family: "Nunito", sans-serif;
+}
+
+.Dictionary section {
+  background: #b6e1e0;
+  padding: 30px;
+  border-radius: 26px;
+  box-shadow: 0 10px 20px rgb(0 0 0 / 10%);
+  margin: 20px 0;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+}
+
+.Dictionary input {
+  width: 100%;
+  border-radius: 6px;
+  padding: 6px 10px;
+  color: #333;
+  border: 1px solid #ddd;
 }
