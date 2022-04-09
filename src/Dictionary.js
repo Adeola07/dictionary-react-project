@@ -5,8 +5,8 @@ import axios from "axios";
 import Result from "./Result";
 import "./Dictionary.css";
 
-export default function Dictionary() {
-  const [keyword, setKeyword] = useState("");
+export default function Dictionary(props) {
+  const [keyword, setKeyword] = useState(props.defaultKeyword);
   const [result, setResult] = useState(null);
   const [loaded, setLoaded] = useState(false);
 
@@ -41,6 +41,7 @@ export default function Dictionary() {
                   className="form-control"
                   placeholder="Enter word here..."
                   autoFocus="on"
+                  defaultValue={props.defaultKeyword}
                 />
               </div>
             </div>
@@ -50,6 +51,6 @@ export default function Dictionary() {
       </div>
     );
   } else {
-    return load();
+    load();
   }
 }
