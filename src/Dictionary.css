@@ -21,3 +21,11 @@
   color: #333;
   border: 1px solid #ddd;
 }
+
+.Dictionary .btn {
+  background-color: #5585b5;
+}
+
+.Dictionary .btn:hover {
+  color: white;
+}

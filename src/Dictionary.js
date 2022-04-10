@@ -57,7 +57,7 @@ export default function Dictionary(props) {
                 <input
                   type="submit"
                   value="Search"
-                  className="btn btn-primary w-100"
+                  className="btn btn-light w-100"
                 />
               </div>
             </div>
